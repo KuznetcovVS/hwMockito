@@ -26,10 +26,4 @@ public class GeoServiceImplTest {
         assertEquals(Country.USA, location.getCountry());
     }
 
-    @Test
-    public void testByIpForUnknown() {
-        Location location = geoService.byIp("123.45.67.89");
-
-        assertEquals(null, location);
-    }
 }

@@ -16,15 +16,15 @@ import static org.mockito.Mockito.when;
 
 public class MessageSenderImplTest {
 
-    private GeoService geoService; // Заглушка для GeoService
-    private LocalizationService localizationService; // Заглушка для LocalizationService
-    private MessageSender messageSender; // Тестируемый класс
+    private GeoService geoService;
+    private LocalizationService localizationService;
+    private MessageSender messageSender;
 
     @Before
     public void setUp() {
-        geoService = Mockito.mock(GeoService.class); // Создание заглушки для GeoService
-        localizationService = Mockito.mock(LocalizationService.class); // Создание заглушки для LocalizationService
-        messageSender = new MessageSenderImpl(geoService, localizationService); // Инициализация тестируемого класса
+        geoService = Mockito.mock(GeoService.class);
+        localizationService = Mockito.mock(LocalizationService.class);
+        messageSender = new MessageSenderImpl(geoService, localizationService);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class MessageSenderImplTest {
 
         String result = messageSender.send(headers);
 
-        assertEquals("Добро пожаловать", result); // Проверка результата
+        assertEquals("Добро пожаловать", result);
     }
 
     @Test
@@ -50,7 +50,7 @@ public class MessageSenderImplTest {
 
         String result = messageSender.send(headers);
 
-        assertEquals("Welcome", result); // Проверка результата
+        assertEquals("Welcome", result);
     }
 
     @Test
@@ -63,7 +63,7 @@ public class MessageSenderImplTest {
 
         String result = messageSender.send(headers);
 
-        assertEquals("Добро пожаловать", result); // Проверка результата
+        assertEquals("Добро пожаловать", result);
     }
 
     @Test
